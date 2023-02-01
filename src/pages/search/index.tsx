@@ -134,8 +134,10 @@ const SearchPage: NextPage = () => {
 
   useEffect(() => {
     if (keyword === undefined) {
+      handleUpdateQuery('keyword', '')
       setFilterKeyword('')
     } else {
+      handleUpdateQuery('keyword', String(keyword))
       setFilterKeyword(String(keyword))
     }
   }, [keyword])
